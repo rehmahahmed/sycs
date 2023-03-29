@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body ng-app="">
+        <center>
+            <b>Form Validation</b>
+            <br><br>
+            <form name = "collegeform" novalidate>
+                <b>Enter College Details</b>
+                <table border="1">
+                    <tr>
+                        <td>College Name: </td>
+                        <td>
+                            <input type="text" name="clgname" ng-modal = "obj.clgname" ng-required="true">
+                            <span ng-show="collegeform.clgname.$touched && collegeform.clgname.$error.required">College name required</span>
+                        </td>
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <td>Enter Contact number: </td>
+                        <td>
+                            <input type="text" name="contact" ng-modal="obj.contact" ng-minlength="8" ng-maxlength="10" ng-required="true">
+                            <span ng-show="collegeform.contact.$touched && collegeform.contact.$error.minlength">Min 8 characters</span>
+                            <span ng-show="collegeform.contact.$touched && collegeform.contact.$error.maxlength">Max 10 characters</span>
+                            <span ng-show="collegeform.contact.$touched && collegeform.contact.$error.required">Contact information required</span>
+                        </td>
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <td>Address: </td>
+                        <td>
+                            <input type="text" name="address" ng-modal="obj.address" ng-required ="true">
+                            <span ng-show="collegeform.address.$touched && collegeform.address.$error.required">Enter address</span>
+                        </td>
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <td>Email: </td>
+                        <td>
+                            <input type="email" name="email" ng-modal="obj.email" ng-required="true">
+                            <span ng-show="collegeform.email.$error.email">Please enter valid email</span>
+                        </td>
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <td><input type="submit" value="Submit"></td>
+                        <td><input type="reset" value="Clear"></td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </body>
+</html>

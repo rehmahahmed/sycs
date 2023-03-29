@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body ng-app="myapp">
+        Commission Calculator and largest Number 
+        <div ng-init="Employee=1; Basicsalary=20000; commissionamt=400; days=0">
+            <h2>Commission Calculator</h2>
+            Name: <input type="text" ng-modal="ename">
+            No. of days: <input type="number" ng-modal="days">
+            <p><b>Employee {{ename}}'s Total salary based on {{days}} number of days: {{(commissionamt*days)+Basicsalary}}</b></p>
+        </div>
+        <div ng-controller="salarycontroller">
+            <h2>Result: {{c}}</h2>
+        </div>
+        <script>
+            angular.module("myapp", []).controller("salarycontroller", function($scope){
+                var a = 80;
+                var b = 20;
+                if(a>=b)$scope.c = "Largest is: "+ a;
+                else $scope.c = "Largest is: "+ b;
+            })
+        </script>
+    </body>
+</html>

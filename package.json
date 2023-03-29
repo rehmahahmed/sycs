@@ -1,0 +1,14 @@
+{
+  "name": "406",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "prac2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rehmah",
+  "license": "ISC",
+  "dependencies":{
+    "mongodb":"*"
+  }
+}
