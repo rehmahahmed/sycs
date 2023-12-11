@@ -11,7 +11,7 @@ public class Prac8Client {
         java.io.BufferedReader br = null;
         java.io.BufferedWriter bw = null;
         try{
-            socket = new Socket("localhost", 8080);
+            socket = new Socket("localhost", 4000);
             insr = new InputStreamReader(socket.getInputStream());
             oswr = new OutputStreamWriter(socket.getOutputStream());
             br = new BufferedReader(insr);
@@ -22,6 +22,8 @@ public class Prac8Client {
                 bw.write(msgtosend);
                 bw.newLine();
                 bw.flush();
+                String m = br.readLine();
+                System.out.println(m);
                 if(msgtosend.equalsIgnoreCase("BYE")){
                     break;
                 }
