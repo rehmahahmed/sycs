@@ -28,9 +28,9 @@ public class prac8 {
 
 // checkbox.html
 /*
-<input type="checkbox" value="A">A<br>
-<input type="checkbox" value="B" CHECKED>B<br>
-<input type="checkbox" value="C">C<br>
-<input type="checkbox" value="D" CHECKED>D<br>
-<input type="checkbox" value="E">E<br>
+<input type="checkbox" id="c" value="A"> A <br>
+<input type="checkbox" id="c" value="B" Checked> B <br>
+<input type="checkbox" id="c" value="C"> C <br>
+<input type="checkbox" id="c" value="D" Checked> D <br>
+<input type="checkbox" id="c" value="E"> E <br>
 */
