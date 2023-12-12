@@ -19,3 +19,12 @@ public class prac7 {
 		System.out.println("Total number of items in dropdown: "+ options.size());
 	}
 }
+
+// continents.html
+/*
+<select id="continents">
+<option value="Asia">Asia</option>
+<option value="Europe">Europe</option>
+<option value="Africa">Africa</option>
+</select>
+*/
