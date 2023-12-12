@@ -1,3 +1,4 @@
+// get number of items in a list/combo box.
 package prac7;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
