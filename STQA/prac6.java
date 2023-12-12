@@ -1,3 +1,4 @@
+// total number of object on webpage.
 package prac6;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
