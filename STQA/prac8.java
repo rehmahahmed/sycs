@@ -1,3 +1,4 @@
+// count number of check boxes, checked and unchecked count.
 package prac8;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -24,3 +25,12 @@ public class prac8 {
 	}
 
 }
+
+// checkbox.html
+/*
+<input type="checkbox" value="A">A<br>
+<input type="checkbox" value="B" CHECKED>B<br>
+<input type="checkbox" value="C">C<br>
+<input type="checkbox" value="D" CHECKED>D<br>
+<input type="checkbox" value="E">E<br>
+*/
