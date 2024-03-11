@@ -1,0 +1,32 @@
+data("warpbreaks")
+warpbreaks
+summary(warpbreaks)
+model1 = aov(breaks~wool+tension, data=warpbreaks)
+summary(model1)
+plot(model1)
+
+model2 = aov(breaks~wool+tension+wool:tension, data=warpbreaks)
+summary(model2)
+plot(model2)
+
+group1 = c(11, 22, 33, 44, 55, 66)
+summary(group1)
+
+group2 = c(12, 23, 34, 45, 56, 67)
+summary(group2)
+
+group3 = c(13, 24, 35, 46, 57, 68)
+summary(group3)
+
+combined_group = data.frame(cbind(group1, group2, group3))
+combined_group
+summary(combined_group)
+
+stacked_group = stack(combined_group)
+stacked_group
+
+result = aov(values~ind, data=stacked_group)
+result
+
+summary(result)
+plot(result)

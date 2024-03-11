@@ -1,0 +1,46 @@
+dataset = read.csv("C:\\Users\\Admin\\Desktop\\TY05 Rehmah\\601 DS\\p6\\Iris.csv")
+dataset$state=factor(dataset, levels=c("Iris-setosa", "Iris-versicolor", "Iris-virginica"))
+dataset$state
+library(caTools)
+split=sample.split(dataset$Species, SplitRatio = 0.8)
+training_set=subset(dataset, split==FALSE)
+regresssor=lm(formula = Species~., data = training_set)
+y_pred = predict(regressor, newdata=test_set)
+lsfit(iris$Petal.Length, iris$Petal.Width)$coefficients
+plot(iris$Petal.Length, iris$Petal.Width, pch=21,
++     bg=c("red","green3","blue")[unclass(iris$Species)], main="Iris Data", xlab="Petal length",
++     ylab="Petal width")
+abline(lsfit(iris$Petal.Length, iris$Petal.Width)$coefficients, col="black")
+lm(Petal.Width ~ Petal.Length, data=iris)$coefficients
+(Intercept) Petal.Length 
+  -0.3630755    0.4157554 
+> plot(iris$Petal.Length, iris$Petal.Width, pch=21,
++     bg=c("red","green3","blue")[unclass(iris$Species)], main="Iris Data", xlab="Petal length",
++     ylab="Petal width")
+abline(lm(Petal.Width ~ Petal.Length, data=iris)$coefficients, col="black")
+> summary(lm(Petal.Width ~ Petal.Length, data=iris))
+plot(iris$Sepal.Width, iris$Sepal.Length, pch=21,
++     bg=c("red","green3","blue")[unclass(iris$Species)], main="Iris Data", xlab="Sepal Width",
++     ylab="Sepal Length")
+abline(lm(Sepal.Length ~ Sepal.Width, data=iris)$coefficients, col="black")
+summary(lm(Sepal.Length ~ Sepal.Width, data=iris))
+ plot(iris$Sepal.Width, iris$Sepal.Length, pch=21,
++     bg=c("red","green3","blue")[unclass(iris$Species)], main="Iris Data", xlab="Petal length",
++     ylab="Sepal length")
+
+abline(lm(Sepal.Length ~ Sepal.Width, data=iris)$coefficients, col="black")
+abline(lm(Sepal.Length ~ Sepal.Width, data=iris[which(iris$Species=="setosa"),])$coefficients,
+abline(lm(Sepal.Length ~ Sepal.Width,
++          data=iris[which(iris$Species=="versicolor"),])$coefficients, col="green3")
+abline(lm(Sepal.Length ~ Sepal.Width, data=iris[which(iris$Species=="virginica"),])$coefficients,
++       col="blue")
+lm(Sepal.Length ~ Sepal.Width, data=iris[which(iris$Species=="setosa"),])$coefficients
+
+lm(Sepal.Length ~ Sepal.Width, data=iris[which(iris$Species=="versicolor"),])$coefficients
+
+lm(Sepal.Length ~ Sepal.Width, data=iris[which(iris$Species=="virginica"),])$coefficients
+
+lm(Sepal.Length ~ Sepal.Width:Species + Species - 1, data=iris)$coefficients
+lm(Sepal.Length ~ Sepal.Width:Species + Species, data=iris)$coefficients
+summary(lm(Sepal.Length ~ Sepal.Width:Species + Species - 1, data=iris))
+summary(step(lm(Sepal.Length ~ Sepal.Width * Species, data=iris)))

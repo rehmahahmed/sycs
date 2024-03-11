@@ -1,0 +1,15 @@
+iris
+head(iris)
+str(iris)
+library(rpart)
+ctree1=rpart(Species~.,data=iris)
+install.packages("rpart.plot")
+library(rpart.plot)
+rpart.plot(ctree1,extra="auto")
+
+titanic <- read.csv("C:\\Users\\Admin\\Desktop\\TY05 Rehmah\\601 DS\\train.csv")
+head(titanic)
+library(rpart)
+fit <- rpart(Survived ~ Pclass + Sex + Age + SibSp + Parch + Fare + Embarked, data=titanic, method="class")
+library(rpart.plot)
+rpart.plot(fit,extra="auto")
