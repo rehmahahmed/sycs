@@ -1,0 +1,6 @@
+sudo apt-get install update
+sudo grep -c "svm\|vmx"/proc/cpuinfo
+cat /proc/cpuinfo
+sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager
+sudo adduser rait
+sudo virsh -c qemu:///system list
