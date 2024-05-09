@@ -1,0 +1,17 @@
+package tycs;
+
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+@WebService(serviceName = "TempConvert")
+public class TempConvert {
+    @WebMethod(operationName = "F_to_C")
+    public Float F_to_C(@WebParam(name = "f") float f) {
+        return ((f-32)*5/9);
+    }
+    @WebMethod(operationName = "C_to_F")
+    public Float C_to_F(@WebParam(name = "c") float c) {
+        // TODO write your implementation code here:
+        return ((c*9/5)+32);
+    }
+}
